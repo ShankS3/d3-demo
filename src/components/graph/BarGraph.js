@@ -1,7 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types'
 import { Bar } from '@vx/shape';
 import { Group } from '@vx/group';
+import PropTypes from 'prop-types';
+import { AxisBottom, AxisLeft } from '@vx/axis';
 import { letterFrequency } from '@vx/mock-data';
 import { scaleBand, scaleLinear } from '@vx/scale';
 
@@ -48,6 +49,12 @@ const BarGraph = ({ width, height }) => {
             );
           })
         }
+        <AxisLeft 
+          hideAxisLine={true}
+          hideTicks={true}
+          scale={yScale}
+          tickFormat={}
+        />
       </Group>
     </svg>
   );
